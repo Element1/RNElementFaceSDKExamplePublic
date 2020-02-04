@@ -6,14 +6,16 @@
  * @flow
  */
 
-import React from 'react';
+import React, {Component} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
   Text,
-  StatusBar,
+  StatusBar, 
+  Button, 
+  TextInput
 } from 'react-native';
 
 import {
@@ -24,91 +26,144 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
+import { configure, remoteEnrollment, remoteAuthentication, getElementUsers } from '@elementinc/react-native-element-face-sdk';
+
+type Props = {};
+export default class App extends Component<Props> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userId: 'lg',
+      configured: false,
+      message: ''
+    };
+  }
+
+  _configureSDK = () => {
+    // TODO: replace YOUR_EAK with your own EAK
+    const sdkConfigured = configure('YOUR_EAK');
+    if (sdkConfigured) {
+      this.setState((prevState) => ({
+        ...prevState,
+        configured: true,
+        message: "SDK Configured"
+      }));
+    } else {
+      alert('SDK not initialized')
+    }
+  };
+
+  _startRemoteEnrollment = () => { 
+    const { userId } = this.state;   
+    const sdkConfigured = this.state.configured;
+    if (sdkConfigured) {
+      remoteEnrollment(userId)
+        .then(({ isEnrolled }) => {
+          this.setState((prevState) => ({
+            ...prevState,
+            message: `isEnrolled: ${isEnrolled}`
+          }));
+        })
+        .catch((message) => {
+          this.setState((prevState) => ({
+            ...prevState,
+            message: message.toString()
+          }));
+        });
+    } else {
+      alert('SDK not initialized')
+    }
+  };
+
+  _startRemoteVerification = () => {
+    const { userId } = this.state;
+    const sdkConfigured = this.state.configured;
+    if (sdkConfigured) {
+      remoteAuthentication(userId)
+        .then(({ isSuccess, message, confidenceScore }) => {
+          this.setState((prevState) => ({
+            ...prevState,
+            message: `${message}\nconfidenceScore: ${confidenceScore}`
+          }));
+        })
+        .catch((message) => {
+          this.setState((prevState) => ({
+            ...prevState,
+            message: message.toString()
+          }));
+        });
+    } else {
+      alert('SDK not initialized')
+    }
+  };
+
+  _getUsers = () => {
+    const sdkConfigured = this.state.configured;
+    if (sdkConfigured) {
+      getElementUsers()
+        .then(({ accounts }) => {
+          var acc = "accounts: " + accounts.join(',');
+          this.setState((prevState) => ({
+            ...prevState,
+            message: acc
+          }));
+        })
+        .catch((message) => {
+          this.setState((prevState) => ({
+            ...prevState,
+            message: message.toString()
+          }));
+        });
+    } else {
+      alert('SDK not initialized')
+    }
+  };
+
+  _updateTextState = (fieldName) => (text) => {
+    this.setState({
+      [fieldName]: text
+    })
+  };
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <StatusBar barStyle="dark-content" />
+        <Text style={styles.welcome}>Element, Welcome to React Native!</Text>
+        <Text style={styles.instructions}>{this.state.message}</Text>
+        <Button style={{ flex: 1, margin: 10 }} title={'Configure SDK'} onPress={this._configureSDK}/>
+        <TextInput
+            style={{height: 40, margin: 10, borderColor: 'gray', borderWidth: 1, width: '90%'}}
+            onChangeText={this._updateTextState('userId')}
+            value={this.state.userId}
+            placeholder={'Enter User ID'}
+        />
+
+        <Button style={{ flex: 1, margin: 10 }} title={'Start Remote Enrollment'} onPress={this._startRemoteEnrollment}/>
+
+        <Button style={{ flex: 1, margin: 10 }} title={'Start Remote Verification'} onPress={this._startRemoteVerification}/>
+
+        <Button style={{ flex: 1, margin: 10 }} title={'Get Users'} onPress={this._getUsers}/>
+      </View>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  container: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 30,
   },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
   },
 });
-
-export default App;
