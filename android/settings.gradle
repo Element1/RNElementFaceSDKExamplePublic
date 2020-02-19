@@ -1,3 +1,16 @@
 rootProject.name = 'RNElementFaceSDKExamplePublic'
+include ':@elementinc_react-native-element-face-sdk'
+project(':@elementinc_react-native-element-face-sdk').projectDir = new File(rootProject.projectDir, '../node_modules/@elementinc/react-native-element-face-sdk/android')
 apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 include ':app'
+
+// Element RN SDK
+// append this to your settings.gradle
+include ':element-face-cam'
+project(':element-face-cam').projectDir = new File(rootProject.projectDir, '../node_modules/@elementinc/react-native-element-face-sdk/android/element-face-cam')
+include ':element-face-core'
+project(':element-face-core').projectDir = new File(rootProject.projectDir, '../node_modules/@elementinc/react-native-element-face-sdk/android/element-face-core')
+include ':element-face-support'
+project(':element-face-support').projectDir = new File(rootProject.projectDir, '../node_modules/@elementinc/react-native-element-face-sdk/android/element-face-support')
+include ':element-face-ui'
+project(':element-face-ui').projectDir = new File(rootProject.projectDir, '../node_modules/@elementinc/react-native-element-face-sdk/android/element-face-ui')

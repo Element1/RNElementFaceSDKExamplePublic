@@ -1,6 +1,6 @@
 {
   "name": "RNElementFaceSDKExamplePublic",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -10,7 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@elementinc/react-native-element-face-sdk": "0.1.1",
+    "@elementinc/react-native-element-face-sdk": "0.2.0",
     "react": "16.9.0",
     "react-native": "0.61.5"
   },

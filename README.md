@@ -5,14 +5,14 @@ React Native app that shows how to use the Element `react-native-element-face-sd
 The module is imported in [package.json](./package.json) file:
 ```
 "dependencies": {
-    "@elementinc/react-native-element-face-sdk": "0.1.1",
+    "@elementinc/react-native-element-face-sdk": "0.2.0",
     ...
   }
 ```
 
 More information is available in the module's [README.md](./node_modules/@elementinc/react-native-element-face-sdk/README.md).
 
-## Runing 
+## Running 
 
 Download and install all the dependencies:
 
@@ -29,6 +29,10 @@ In the iOS folder, setup the project files:
 The app's Xcode project requires the Element SDK and the theme files to be available in `./ios/RNElementFaceSDKExamplePublic/Frameworks` (copy the files from the `./node_modules/@elementinc/react-native-element-face-sdk/ios/Frameworks` directory).
 
 To run the app, open the Xcode workspace (`./ios/RNElementFaceSDKExamplePublic.xcworkspace`); on the `General` tab, update the `Bundle Identifier` (use your company prefix), choose your Team in the `Signing` panel and click `Run`.
+
+### Android
+
+See integration guide on the README of `@elementinc/react-native-element-face-sdk`
 
 ## Notes when integrating into an existing app
 
