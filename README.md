@@ -30,6 +30,10 @@ The app's Xcode project requires the Element SDK and the theme files to be avail
 
 To run the app, open the Xcode workspace (`./ios/RNElementFaceSDKExamplePublic.xcworkspace`); on the `General` tab, update the `Bundle Identifier` (use your company prefix), choose your Team in the `Signing` panel and click `Run`.
 
+### Android
+
+See integration guide on the README of `@elementinc/react-native-element-face-sdk`
+
 ## Notes when integrating into an existing app
 
 ### iOS
