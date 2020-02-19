@@ -12,7 +12,7 @@ The module is imported in [package.json](./package.json) file:
 
 More information is available in the module's [README.md](./node_modules/@elementinc/react-native-element-face-sdk/README.md).
 
-## Runing 
+## Running 
 
 Download and install all the dependencies:
 
