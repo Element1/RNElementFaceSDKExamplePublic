@@ -5,7 +5,7 @@ React Native app that shows how to use the Element `react-native-element-face-sd
 The module is imported in [package.json](./package.json) file:
 ```
 "dependencies": {
-    "@elementinc/react-native-element-face-sdk": "0.1.1",
+    "@elementinc/react-native-element-face-sdk": "0.2.0",
     ...
   }
 ```

@@ -133,13 +133,17 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+
     }
     splits {
         abi {
             reset()
             enable enableSeparateBuildPerCPUArchitecture
             universalApk false  // If true, also generate a universal APK
-            include "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+            include "armeabi-v7a", "arm64-v8a"
         }
     }
     signingConfigs {
@@ -179,8 +183,13 @@ android {
 }
 
 dependencies {
+    implementation project(':@elementinc_react-native-element-face-sdk')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation project(':element-face-cam')
+    implementation project(':element-face-core')
+    implementation project(':element-face-support')
+    implementation project(':element-face-ui')
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
