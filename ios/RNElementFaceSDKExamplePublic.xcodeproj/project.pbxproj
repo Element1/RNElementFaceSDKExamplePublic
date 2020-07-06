@@ -17,7 +17,7 @@
 		4D82F92023E9A001005D6F5A /* CountdownBlueGreen.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D82F91A23E9A001005D6F5A /* CountdownBlueGreen.bundle */; };
 		4D82F92123E9A001005D6F5A /* CountdownYellow.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D82F91B23E9A001005D6F5A /* CountdownYellow.bundle */; };
 		4D82F92223E9A001005D6F5A /* LegacyCountdown.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D82F91C23E9A001005D6F5A /* LegacyCountdown.bundle */; };
-		4D82F92423E9A018005D6F5A /* ElementSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D82F92323E9A018005D6F5A /* ElementSDK.framework */; };
+		4D82F92423E9A018005D6F5A /* ElementSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D82F92323E9A018005D6F5A /* ElementSDK.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		4D82F92523E9A018005D6F5A /* ElementSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D82F92323E9A018005D6F5A /* ElementSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5205730F38B0B8DA94F56DF2 /* libPods-RNElementFaceSDKExamplePublic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC4FB564D3E4EBF78D1D8F9 /* libPods-RNElementFaceSDKExamplePublic.a */; };
 /* End PBXBuildFile section */
@@ -331,11 +331,14 @@
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
+				EXCLUDED_SOURCE_FILE_NAMES = "";
+				"EXCLUDED_SOURCE_FILE_NAMES[sdk=iphonesimulator*]" = ElementSDK.framework;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RNElementFaceSDKExamplePublic/Frameworks",
 				);
 				INFOPLIST_FILE = RNElementFaceSDKExamplePublic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -356,11 +359,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
+				EXCLUDED_SOURCE_FILE_NAMES = "";
+				"EXCLUDED_SOURCE_FILE_NAMES[sdk=iphonesimulator*]" = ElementSDK.framework;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RNElementFaceSDKExamplePublic/Frameworks",
 				);
 				INFOPLIST_FILE = RNElementFaceSDKExamplePublic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
