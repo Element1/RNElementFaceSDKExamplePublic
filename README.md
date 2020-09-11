@@ -5,7 +5,7 @@ React Native app that shows how to use the Element `react-native-element-face-sd
 The module is imported in [package.json](./package.json) file:
 ```
 "dependencies": {
-    "@elementinc/react-native-element-face-sdk": "0.2.0",
+    "@elementinc/react-native-element-face-sdk": "1.0.0",
     ...
   }
 ```
@@ -43,3 +43,13 @@ See integration guide on the README of `@elementinc/react-native-element-face-sd
 * The Element SDK requires access to the camera to enroll / authenticate users so your app's Info.plist must contain an `NSCameraUsageDescription` key with a string value explaining why.
 
 * You need to embed the `ElementSDK.framework` into your app (by clicking on your app's project then your target and under "Embedded Binaries", click the "+" and chose the `ElementSDK.framework`) and include the theme bundle you would like your app to use.
+
+## Upgrading
+
+* Bump the version in [package.json](./package.json) file.
+* `yarn` to download the new version
+
+### iOS upgrade
+* `$ cd ios`
+* `$ pod install`
+* Update the app's Xcode project to include the newest framework / files (from: `./node_modules/@elementinc/react-native-element-face-sdk/ios/Frameworks`)

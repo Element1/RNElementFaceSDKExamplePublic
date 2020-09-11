@@ -11,11 +11,10 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		4D50020D250BC48700805A8C /* SelfieDot.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D50020B250BC48700805A8C /* SelfieDot.bundle */; };
+		4D50020E250BC48700805A8C /* LocalProcessing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D50020C250BC48700805A8C /* LocalProcessing.bundle */; };
 		4D82F91D23E9A001005D6F5A /* CountdownDefault.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D82F91723E9A001005D6F5A /* CountdownDefault.bundle */; };
 		4D82F91E23E9A001005D6F5A /* FlowerPetals.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D82F91823E9A001005D6F5A /* FlowerPetals.bundle */; };
-		4D82F91F23E9A001005D6F5A /* CountdownBlue.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D82F91923E9A001005D6F5A /* CountdownBlue.bundle */; };
-		4D82F92023E9A001005D6F5A /* CountdownBlueGreen.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D82F91A23E9A001005D6F5A /* CountdownBlueGreen.bundle */; };
-		4D82F92123E9A001005D6F5A /* CountdownYellow.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D82F91B23E9A001005D6F5A /* CountdownYellow.bundle */; };
 		4D82F92223E9A001005D6F5A /* LegacyCountdown.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D82F91C23E9A001005D6F5A /* LegacyCountdown.bundle */; };
 		4D82F92423E9A018005D6F5A /* ElementSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D82F92323E9A018005D6F5A /* ElementSDK.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		4D82F92523E9A018005D6F5A /* ElementSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D82F92323E9A018005D6F5A /* ElementSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -48,11 +47,10 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNElementFaceSDKExamplePublic/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNElementFaceSDKExamplePublic/main.m; sourceTree = "<group>"; };
 		2BC4FB564D3E4EBF78D1D8F9 /* libPods-RNElementFaceSDKExamplePublic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNElementFaceSDKExamplePublic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D50020B250BC48700805A8C /* SelfieDot.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SelfieDot.bundle; path = RNElementFaceSDKExamplePublic/Frameworks/SelfieDot.bundle; sourceTree = "<group>"; };
+		4D50020C250BC48700805A8C /* LocalProcessing.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LocalProcessing.bundle; path = RNElementFaceSDKExamplePublic/Frameworks/LocalProcessing.bundle; sourceTree = "<group>"; };
 		4D82F91723E9A001005D6F5A /* CountdownDefault.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = CountdownDefault.bundle; path = RNElementFaceSDKExamplePublic/Frameworks/CountdownDefault.bundle; sourceTree = "<group>"; };
 		4D82F91823E9A001005D6F5A /* FlowerPetals.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FlowerPetals.bundle; path = RNElementFaceSDKExamplePublic/Frameworks/FlowerPetals.bundle; sourceTree = "<group>"; };
-		4D82F91923E9A001005D6F5A /* CountdownBlue.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = CountdownBlue.bundle; path = RNElementFaceSDKExamplePublic/Frameworks/CountdownBlue.bundle; sourceTree = "<group>"; };
-		4D82F91A23E9A001005D6F5A /* CountdownBlueGreen.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = CountdownBlueGreen.bundle; path = RNElementFaceSDKExamplePublic/Frameworks/CountdownBlueGreen.bundle; sourceTree = "<group>"; };
-		4D82F91B23E9A001005D6F5A /* CountdownYellow.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = CountdownYellow.bundle; path = RNElementFaceSDKExamplePublic/Frameworks/CountdownYellow.bundle; sourceTree = "<group>"; };
 		4D82F91C23E9A001005D6F5A /* LegacyCountdown.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LegacyCountdown.bundle; path = RNElementFaceSDKExamplePublic/Frameworks/LegacyCountdown.bundle; sourceTree = "<group>"; };
 		4D82F92323E9A018005D6F5A /* ElementSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ElementSDK.framework; path = RNElementFaceSDKExamplePublic/Frameworks/ElementSDK.framework; sourceTree = "<group>"; };
 		7E5EC11916D47BC7FDBCCFC1 /* Pods-RNElementFaceSDKExamplePublic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNElementFaceSDKExamplePublic.debug.xcconfig"; path = "Target Support Files/Pods-RNElementFaceSDKExamplePublic/Pods-RNElementFaceSDKExamplePublic.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,10 +126,9 @@
 		4D82F91623E99FF1005D6F5A /* Themes */ = {
 			isa = PBXGroup;
 			children = (
-				4D82F91923E9A001005D6F5A /* CountdownBlue.bundle */,
-				4D82F91A23E9A001005D6F5A /* CountdownBlueGreen.bundle */,
+				4D50020C250BC48700805A8C /* LocalProcessing.bundle */,
+				4D50020B250BC48700805A8C /* SelfieDot.bundle */,
 				4D82F91723E9A001005D6F5A /* CountdownDefault.bundle */,
-				4D82F91B23E9A001005D6F5A /* CountdownYellow.bundle */,
 				4D82F91823E9A001005D6F5A /* FlowerPetals.bundle */,
 				4D82F91C23E9A001005D6F5A /* LegacyCountdown.bundle */,
 			);
@@ -227,13 +224,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				4D82F91F23E9A001005D6F5A /* CountdownBlue.bundle in Resources */,
+				4D50020D250BC48700805A8C /* SelfieDot.bundle in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				4D82F91D23E9A001005D6F5A /* CountdownDefault.bundle in Resources */,
 				4D82F92223E9A001005D6F5A /* LegacyCountdown.bundle in Resources */,
+				4D50020E250BC48700805A8C /* LocalProcessing.bundle in Resources */,
 				4D82F91E23E9A001005D6F5A /* FlowerPetals.bundle in Resources */,
-				4D82F92123E9A001005D6F5A /* CountdownYellow.bundle in Resources */,
-				4D82F92023E9A001005D6F5A /* CountdownBlueGreen.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
