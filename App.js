@@ -281,25 +281,28 @@ export default class App extends Component<Props> {
 
       <View style={{ flexDirection: 'row', margin: 0 }}>
         <TextInput
-          style={{height: 40, margin: 10, borderColor: 'gray', borderWidth: 1, width: '60%'}}
+          style={{height: 40, margin: 10, borderColor: 'gray', color: 'black', borderWidth: 1, width: '60%'}}
           onChangeText={this._updateTextState('userId')}
           value={this.state.userId}
           placeholder={'User ID'}
+          placeholderTextColor='#D3D3D3'
         />
         <Button style={{height: 40, margin: 0, width:'30%'}} title={'Generate'} onPress={this._generateUserId}/>
       </View>
       <View style={{ flexDirection: 'row', margin: 0 }}>
         <TextInput
-          style={{height: 40, margin: 10, borderColor: 'gray', borderWidth: 1, width: '40%'}}
+          style={{height: 40, margin: 10, borderColor: 'gray', color: 'black', borderWidth: 1, width: '40%'}}
           onChangeText={this._updateTextState('firstName')}
           value={this.state.firstName}
           placeholder={'First Name (enroll only)'}
+          placeholderTextColor='#D3D3D3'
         />
         <TextInput
-          style={{height: 40, margin: 10, borderColor: 'gray', borderWidth: 1, width: '40%'}}
+          style={{height: 40, margin: 10, borderColor: 'gray', color: 'black', borderWidth: 1, width: '40%'}}
           onChangeText={this._updateTextState('lastName')}
           value={this.state.lastName}
           placeholder={'Last Name (enroll only)'}
+          placeholderTextColor='#D3D3D3'
         />
       </View>
     </>

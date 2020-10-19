@@ -675,10 +675,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@elementinc/react-native-element-face-sdk@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@elementinc/react-native-element-face-sdk/-/react-native-element-face-sdk-1.0.1.tgz#0816c2909b212d489472b76884b7f128881442ec"
-  integrity sha512-9S3ksZM05tRugip760Ua92HbKPh6vS/CEGDkxxojvsMksYqgkJe5lQB68bSpMVf2nVrKo9W/jjiABBy4bo0HWg==
+"@elementinc/react-native-element-face-sdk@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@elementinc/react-native-element-face-sdk/-/react-native-element-face-sdk-1.0.2.tgz#d430b0c11a2acd675620a175d852bc460f238aa4"
+  integrity sha512-Mt/Wby/by1Dikvq/YK12+wjV6RRBRaHeFFRUxAuIB1GfaFP3ywBkab2Id/Q9Gv0E948qSuFMYsrvtmK6b87rpQ==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
