@@ -10,7 +10,7 @@ The module is imported in [package.json](./package.json) file:
   }
 ```
 
-More information is available in the module's [README.md](./node_modules/@elementinc/react-native-element-face-sdk/README.md).
+Once you install the `@elementinc/react-native-element-face-sdk` module, you can read its `README.md` in `./node_modules/@elementinc/react-native-element-face-sdk/README.md`.
 
 ## Running 
 
