@@ -1,6 +1,6 @@
 # RNElementFaceSDKExamplePublic
 
-React Native app that shows how to use the Element `react-native-element-face-sdk` for user enrollment and authentication.
+This repository contains a React Native app that shows how to use the Element `react-native-element-face-sdk` for user enrollment and authentication.
 
 The module is imported in [package.json](./package.json) file:
 ```
@@ -11,6 +11,14 @@ The module is imported in [package.json](./package.json) file:
 ```
 
 Once you install the `@elementinc/react-native-element-face-sdk` module, you can read its `README.md` in `./node_modules/@elementinc/react-native-element-face-sdk/README.md`.
+
+## Installing
+
+The module is private (and hosted on https://www.npmjs.com/); to download and install it, you will need to get an access token (ACCESS_TOKEN) from Element.  Follow these steps to install the module:
+* Go to your app's repository / folder
+* Log in to your NPMJS account: $ npm login
+* Set your access token: $ npm config set //registry.npmjs.org/:_authToken=ACCESS_TOKEN
+* Install the latest version of the module: $ npm i @elementinc/react-native-element-face-sdk
 
 ## Running 
 
